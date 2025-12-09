@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f0; /* fundo rosa claro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 10px;
+        }
+        .banner {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 480px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            animation: fadeIn 1.5s ease-in-out;
+            overflow-y: auto;
+            max-height: 95vh;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(-20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        .banner img {
+            width: 250px;
+            margin-bottom: 20px;
+        }
+        .banner h2 {
+            font-size: 1.6em;
+            color: #ff9ecb; /* rosa mais claro */
+            margin: 15px 0 30px 0;
+        }
+        .prices-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px 15px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .price {
+            font-size: 1em; /* menor fonte */
+            font-weight: 600;
+            color: #fff;
+            background-color: #c52062; /* rosa claro para caixas */
+            padding: 8px 12px; /* menos padding */
+            border-radius: 10px;
+            animation: pulse 2s infinite;
+            box-shadow: 0 2px 8px rgba(230, 192, 171, 0.774);
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        .cta {
+            margin-top: 20px;
+            display: inline-block;
+            background-color: #c73479; /* rosa claro */
+            color: #fff;
+            font-weight: bold;
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            animation: blink 1.5s infinite;
+            font-size: 1.15em;
+            box-shadow: 0 0 12px #ff9ecb;
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+        .cta:hover {
+            background-color: #c74481; /* rosa médio no hover */
+            box-shadow: 0 0 20px #ff7ab8;
+        }
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0.65; }
+        }
+        .contacts {
+            margin-top: 25px;
+            font-size: 1em;
+        }
+        .contacts a {
+            text-decoration: none;
+            color: #ff9ecb; /* rosa claro */
+            margin: 0 10px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        .contacts a:hover {
+            color: #ff7ab8;
+        }
+        p.description {
+            font-size: 1.05em;
+            margin-top: 15px;
+            color: #cc6699;
+            font-weight: 600;
+        }
+        .day-label {
+            font-size: 0.85em;
+            margin-bottom: 6px;
+            color: #ffb3d1;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="logoanne.png.png" alt="Anne Tischler Makeup Logo" />
+        <h2>🎉 Pacotes de Make! 🎉</h2>
+
+        <p class="description">💖 Arrase nas festas com maquiagem impecável para vários dias!</p>
+
+        <div class="prices-container">
+            <!-- Express -->
+            <div>
+                <div class="day-label">💋 Express</div>
+                <div class="price">R$ 80 (1 dia)</div>
+                <div class="price">R$ 140 (2 dias)</div>
+                <div class="price">R$ 205 (3 dias)</div>
+                <div class="price">R$ 260 (4 dias)</div>
+            </div>
+
+            <!-- Social -->
+            <div>
+                <div class="day-label">💃 Social</div>
+                <div class="price">R$ 100 (1 dia)</div>
+                <div class="price">R$ 170 (2 dias)</div>
+                <div class="price">R$ 250 (3 dias)</div>
+                <div class="price">R$ 300 (4 dias)</div>
+            </div>
+
+            <!-- Blindada -->
+            <div>
+                <div class="day-label">💎 Blindada</div>
+                <div class="price">R$ 120 (1 dia)</div>
+                <div class="price">R$ 210 (2 dias)</div>
+                <div class="price">R$ 300 (3 dias)</div>
+                <div class="price">R$ 380 (4 dias)</div>
+            </div>
+        </div>
+
+        <a href="https://wa.me/5549984111810" class="cta">⏰ RESERVE JÁ!</a>
+
+        <div class="contacts">
+            Contato: 
+            <a href="https://wa.me/5549984111810" target="_blank">WhatsApp</a> | 
+            <a href="https://instagram.com/annetischlermakeup" target="_blank">Instagram</a> | 
+            <a href="mailto:annetischlerr@gmail.com">E-mail</a>
+        </div>
+    </div>
+</body>
+</html>
