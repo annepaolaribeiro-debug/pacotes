@@ -3,142 +3,156 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <title>Anne Tischler Makeup</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #ffe6f0; /* fundo rosa claro */
+            background-color: #ffe6f0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             padding: 10px;
         }
+
         .banner {
             background-color: #fff;
-            padding: 30px;
+            padding: 30px 20px;
             border-radius: 20px;
             text-align: center;
-            max-width: 480px;
+            max-width: 500px;
+            width: 100%;
             box-shadow: 0 10px 25px rgba(0,0,0,0.15);
             animation: fadeIn 1.5s ease-in-out;
-            overflow-y: auto;
-            max-height: 95vh;
         }
+
         @keyframes fadeIn {
             from {opacity: 0; transform: translateY(-20px);}
             to {opacity: 1; transform: translateY(0);}
         }
+
         .banner img {
             width: 250px;
+            max-width: 80%;
             margin-bottom: 20px;
         }
+
         .banner h2 {
-            font-size: 1.6em;
-            color: #ff9ecb; /* rosa mais claro */
+            font-size: 1.8em;
+            color: #ff9ecb;
             margin: 15px 0 30px 0;
         }
-        .prices-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px 15px;
+
+        .description {
+            font-size: 1.1em;
             margin-bottom: 20px;
-            text-align: center;
-        }
-        .price {
-            font-size: 1em; /* menor fonte */
+            color: #cc6699;
             font-weight: 600;
+        }
+
+        .prices-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .price-box {
+            background-color: #c52062;
             color: #fff;
-            background-color: #c52062; /* rosa claro para caixas */
-            padding: 8px 12px; /* menos padding */
-            border-radius: 10px;
-            animation: pulse 2s infinite;
-            box-shadow: 0 2px 8px rgba(230, 192, 171, 0.774);
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(230,192,171,0.7);
         }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
+
+        .day-label {
+            font-size: 1.1em;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
+
+        .price {
+            font-size: 1.2em;
+            margin: 5px 0;
+            font-weight: 600;
+        }
+
         .cta {
-            margin-top: 20px;
             display: inline-block;
-            background-color: #c73479; /* rosa claro */
+            background-color: #c73479;
             color: #fff;
             font-weight: bold;
             padding: 14px 28px;
             border-radius: 10px;
             text-decoration: none;
             animation: blink 1.5s infinite;
-            font-size: 1.15em;
+            font-size: 1.2em;
             box-shadow: 0 0 12px #ff9ecb;
             transition: box-shadow 0.3s ease, background-color 0.3s ease;
         }
+
         .cta:hover {
-            background-color: #c74481; /* rosa médio no hover */
+            background-color: #c74481;
             box-shadow: 0 0 20px #ff7ab8;
         }
+
         @keyframes blink {
             0%, 50%, 100% { opacity: 1; }
             25%, 75% { opacity: 0.65; }
         }
+
         .contacts {
             margin-top: 25px;
             font-size: 1em;
         }
+
         .contacts a {
             text-decoration: none;
-            color: #ff9ecb; /* rosa claro */
+            color: #ff9ecb;
             margin: 0 10px;
             font-weight: 600;
             transition: color 0.3s ease;
         }
+
         .contacts a:hover {
             color: #ff7ab8;
         }
-        p.description {
-            font-size: 1.05em;
-            margin-top: 15px;
-            color: #cc6699;
-            font-weight: 600;
-        }
-        .day-label {
-            font-size: 0.85em;
-            margin-bottom: 6px;
-            color: #ffb3d1;
-            font-weight: 700;
+
+        /* Responsivo para telas maiores */
+        @media (min-width: 600px) {
+            .prices-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .price-box {
+                flex: 1;
+            }
         }
     </style>
 </head>
 <body>
     <div class="banner">
-        <img src="logoanne.png.png" alt="Anne Tischler Makeup Logo" />
+        <img src="logoanne.png" alt="Anne Tischler Makeup Logo" />
         <h2>🎉 Pacotes de Make! 🎉</h2>
-
         <p class="description">💖 Arrase nas festas com maquiagem impecável para vários dias!</p>
 
         <div class="prices-container">
-            <!-- Express -->
-            <div>
+            <div class="price-box">
                 <div class="day-label">💋 Express</div>
                 <div class="price">R$ 80 (1 dia)</div>
                 <div class="price">R$ 140 (2 dias)</div>
                 <div class="price">R$ 205 (3 dias)</div>
                 <div class="price">R$ 260 (4 dias)</div>
             </div>
-
-            <!-- Social -->
-            <div>
+            <div class="price-box">
                 <div class="day-label">💃 Social</div>
                 <div class="price">R$ 100 (1 dia)</div>
                 <div class="price">R$ 170 (2 dias)</div>
                 <div class="price">R$ 250 (3 dias)</div>
                 <div class="price">R$ 300 (4 dias)</div>
             </div>
-
-            <!-- Blindada -->
-            <div>
+            <div class="price-box">
                 <div class="day-label">💎 Blindada</div>
                 <div class="price">R$ 120 (1 dia)</div>
                 <div class="price">R$ 210 (2 dias)</div>
@@ -158,3 +172,4 @@
     </div>
 </body>
 </html>
+
